@@ -37,9 +37,9 @@ NormalTF(
 
 \item{data}{The data frame}
 
-\item{coef}{Initial value for mean on coefficient's prior distribution or \eqn{\beta}'s prior distribution}
+\item{coef}{Vector contains initial value for mean on coefficient's prior distribution or \eqn{\beta}'s prior distribution}
 
-\item{var.coef}{Initial value for varians on coefficient's prior distribution or \eqn{\beta}'s prior distribution}
+\item{var.coef}{Vector contains Initial value for varians on coefficient's prior distribution or \eqn{\beta}'s prior distribution}
 }
 \value{
 This function returns a list with following objects:
@@ -72,6 +72,10 @@ mod$Est_sub #Subarea mean estimate
 mod$Est_area #area mean estimate
 mod$coefficient #coefficient estimate
 mod$refVar #random effect subarea and area estimates
+
+#Load Library 'coda' to execute the plot
+#autocorr.plot(mod$plot[[3]]) is used to generate ACF Plot
+#plot(mod$plot[[3]]) is used to generate Density and trace plot
 
 ##for dataset with nonsampled subarea use dataTwofoldNS
 }

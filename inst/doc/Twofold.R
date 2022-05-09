@@ -9,7 +9,7 @@ library(saeHB.twofold)
 data("dataTwofold")
 
 ## -----------------------------------------------------------------------------
-model=NormalTF(y~x1+x2,vardir="vardir",area = "codearea",weight = "w",iter.mcmc = 50000,thin=20,burn.in = 1000,data=dataTwofold)
+model=NormalTF(y~x1+x2,vardir="vardir",area = "codearea",weight = "w",iter.mcmc = 100000,thin=50,burn.in = 1000,data=dataTwofold)
 
 ## -----------------------------------------------------------------------------
 model$Est_sub
@@ -21,7 +21,7 @@ model$Est_area
 model$coefficient
 
 ## -----------------------------------------------------------------------------
-model$refvar
+model$refVar
 
 ## -----------------------------------------------------------------------------
 CV=(model$Est_sub$SD)/(model$Est_sub$Mean)*100
@@ -41,5 +41,8 @@ summary(cbind(dirCV,CV))
 boxplot(cbind(dirCV,CV),ylim=c(0,50))
 
 ## -----------------------------------------------------------------------------
-model$refvar
+model$refVar
+
+## -----------------------------------------------------------------------------
+model$plot
 
