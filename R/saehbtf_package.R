@@ -3,7 +3,7 @@
 #' @section Author(s):
 #' Reyhan Saadi, Azka Ubaidillah
 #'
-#' \strong{Maintaner}: Reyhan Saadi \email{221810557@stis.ac.id}
+#' \strong{Maintaner}: Reyhan Saadi \email{reyhansaadi335@gmail.com}
 #'
 #' @section Functions:
 #' \describe{
